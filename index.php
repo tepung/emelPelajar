@@ -10,8 +10,6 @@ $userpage = 1;
 global $module_name,$cookie,$user,$db,$mintareset;
 
 cookiedecode($user);
-//$uname=$cookie[1];
-//echo "===$umane==";
 
 // Quota
 // When you want to enforce quota for your mailbox users set this to 'YES'.
@@ -58,9 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 		$error_msg = "Sila penuhi semua maklumat yang diminta!";
     }
 
-    //$mbox = escape_string ($_POST['fUsername']) . "@$fDomain";
-    //$mbox = escape_string ($_POST['fUsername']) . "@$fDomain";
-    //$mbox = strtolower($_POST['fUsername']);
     $mbox = trim(strtolower($_POST['fUsername']));
     $fDomain = escape_string ($fDomain);
     $fQuota = "5";
@@ -211,8 +206,6 @@ function userForm($xfUsername='',$xfnokp='',$user){
                 echo "<table><tr><td><input type=\"submit\" name=\"mintareset\" value=\"Reset Password Emel\">";
                 echo "<tr><td><input type=\"submit\" name=\"mintabaiki\" value=\"Baiki Masalah Emel\">";
                 echo "</td></tr></table></form><br>";
-                //echo "<input type='submit' value='Reset Password Emel'></td></tr><br>";
-                //echo "<input type='submit' value='Baiki Emel'></td></tr></table></form><br>";
 
 
 		if (isset($_POST['mintareset'])) {
